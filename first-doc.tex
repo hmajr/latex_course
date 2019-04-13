@@ -14,6 +14,8 @@
 \usepackage{float} %Este pacote força posicionamento de figuras
 \usepackage{subcaption} %Este pacote adciona suporte subfiguras
 \usepackage{wrapfig} %Este pacote permite colocar figura no meio do texto
+\usepackage{multirow} %Este pacote adciona suporte mesclagem linhas
+\usepackage{tabularx} %Este pacote permite personalizaçao margens da tabela
 %Cores personalizadas
 \definecolor{minhacorrgb}{RGB}{85,158,131} %define cor personalizada
 
@@ -55,7 +57,10 @@
 	\tableofcontents %cria sumário
 	\newpage
 	
-	\listoffigures
+	\listoffigures %cria sumário de figuras
+	\newpage
+	
+	\listoftables %cria sumário de tabelas
 	\newpage
 	
 	%%
@@ -256,5 +261,59 @@
 		\end{wrapfigure}
 	
 		Turpis egestas pretium aenean pharetra magna ac placerat. Sed adipiscing diam donec adipiscing tristique risus nec. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Sagittis eu volutpat odio facilisis mauris sit. Faucibus vitae aliquet nec ullamcorper sit amet risus. Egestas maecenas pharetra convallis posuere morbi leo. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Malesuada fames ac turpis egestas integer eget aliquet nibh. Sed risus ultricies tristique nulla aliquet. Adipiscing commodo elit at imperdiet dui accumsan. Orci phasellus egestas tellus rutrum tellus pellentesque. Ultricies mi quis hendrerit dolor. Vehicula ipsum a arcu cursus. Arcu bibendum at varius vel pharetra vel. Et tortor at risus viverra adipiscing at in tellus integer. Tincidunt tortor aliquam nulla facilisi cras fermentum odio. Tortor condimentum lacinia quis vel eros donec ac odio tempor.
+		\newpage
+		
+		%%
+		%%	ESTUDO TABELAS
+		%%
+		\section{Seção das tabelas}
+			Orci a scelerisque purus semper eget duis at tellus at. Molestie at elementum eu facilisis sed. Adipiscing tristique risus nec feugiat in fermentum posuere urna. A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Etiam erat velit scelerisque in dictum non. Arcu cursus vitae congue mauris rhoncus aenean. Sed augue lacus viverra vitae congue eu consequat. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus et. Hendrerit gravida rutrum quisque non. Et netus et malesuada fames ac turpis egestas maecenas. Id cursus metus aliquam eleifend mi in. Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae.
+			
+			\begin{table}[H]
+				\centering
+				\caption[Legenda curta da tabela]{Legenda longa da tabela}
+				\label{tab:tab1}
+				\begin{tabular}{ l|l|l } % | reprensa as bordas verticais, l (alinhando a esquerda)
+					%\hline %linha horizontal
+					A1 & B1 & C1 \\ \hline 
+					A2 & B2 & C2 \\ \hline
+					A3 & B3 & C3 \\ %\hline
+				\end{tabular}
+				\vspace{-30pt}
+			\end{table}
+		
+			Pellentesque elit ullamcorper dignissim cras tincidunt. Sit amet volutpat consequat mauris nunc. Odio eu feugiat pretium nibh. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Elementum sagittis vitae et leo. Massa massa ultricies mi quis hendrerit dolor magna. Scelerisque purus semper eget duis at. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Diam vel quam elementum pulvinar. Tincidunt arcu non sodales neque sodales ut etiam. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices. Id porta nibh venenatis cras. Ullamcorper malesuada proin libero nunc. Malesuada fames ac turpis egestas sed tempus urna et. Ultricies mi quis hendrerit dolor magna eget est. Odio aenean sed adipiscing diam donec adipiscing tristique. Egestas pretium aenean pharetra magna ac placerat vestibulum. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae.
+			
+			\begin{table}[H] %H define 
+				\centering
+				\caption[Legenda curta da tabela 2]{Legenda longa da tabela 2}
+				\label{tab:tab2}
+				\begin{tabular}{|l|l|l|}
+					\hline
+					A1 & \multicolumn{2}{l|}{B1} \\ \hline %comando multicolumn para especificar quantas células mesclar {coluna}{Align |(borda)}{conteúdo}
+					A2 & B2         & C2         \\ \hline
+					A3 & B3         & C3         \\ \hline
+				\end{tabular}
+			\end{table}
+			
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa eget egestas purus viverra accumsan in nisl. A condimentum vitae sapien pellentesque habitant morbi. Erat velit scelerisque in dictum non consectetur. Fringilla urna porttitor rhoncus dolor purus non enim praesent. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Posuere urna nec tincidunt praesent semper feugiat nibh sed. Nibh tellus molestie nunc non blandit. Aliquam id diam maecenas ultricies mi eget. Consectetur libero id faucibus nisl. Metus dictum at tempor commodo ullamcorper. Fringilla urna porttitor rhoncus dolor. Morbi leo urna molestie at elementum. Eu consequat ac felis donec et. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Nunc mi ipsum faucibus vitae aliquet nec.
+
+			\renewcommand{\arraystretch}{3}
+			\begin{table}[H]
+				\centering
+				\caption[Legenda curta da tabela 3]{Legenda longa da tabela 3}
+				\label{tab:tab3}
+				\begin{tabularx}{0.5\textwidth}{|X|X|X|} % X indica quais colunas devem ser expandidas
+					\hline
+					\centering A1 & \multicolumn{2}{c|} %multicolumn mesclagem de colunas ; {c|} centraliza o texto {\multirow{2}{*}{B1}}
+									 {\multirow{2}{*}{B1}} %multirow define númeno de linhas para mesclar
+									 \\ \cline{1-1} %indica de que célula até qual célula a borda vai
+					\hfill A2 & \multicolumn{2}{l|}{}                    \\ \hline %hfill alinha a direita
+					A3 & B3                  & C3                 \\ \hline
+				\end{tabularx}
+				\vspace{-20pt}
+			\end{table}
+			
+			Ipsum dolor sit amet consectetur adipiscing elit. Elementum tempus egestas sed sed risus. Proin nibh nisl condimentum id venenatis a condimentum vitae. Massa enim nec dui nunc mattis enim ut tellus. In est ante in nibh mauris cursus. Dignissim cras tincidunt lobortis feugiat. Cras semper auctor neque vitae. Metus dictum at tempor commodo. Sit amet est placerat in egestas erat imperdiet sed euismod. Ultrices tincidunt arcu non sodales neque sodales ut. Consequat interdum varius sit amet mattis vulputate enim. Metus aliquam eleifend mi in nulla posuere. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Lectus urna duis convallis convallis tellus. Morbi tristique senectus et netus et malesuada fames. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. At ultrices mi tempus imperdiet. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Egestas pretium aenean pharetra magna ac placerat.
 \end{document}
 		
