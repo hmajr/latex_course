@@ -7,7 +7,15 @@
 \usepackage[utf8]{inputenc} %Este pacote adciona suporte acentuação
 \usepackage[brazil]{babel} %Este pacote traduz comandos para pt-br
 \usepackage{indentfirst} %Este pacote identa primeiro parágrafo
-\usepackage{setspace} %Este apcote altera espaçamento entre linhas
+\usepackage{setspace} %Este pacote altera espaçamento entre linhas
+\usepackage[a4paper, left=1cm, right=2cm, top=2cm, bottom=3cm]{geometry} %Este pacote altera margem do documento
+\usepackage[usenames, dvipsnames]{xcolor} %Modifica as cores [pacotes adcionais de cores]
+\usepackage{graphicx} %Este pacote adciona suporte a figuras
+\usepackage{float} %Este pacote força posicionamento de figuras
+\usepackage{subcaption} %Este pacote adciona suporte subfiguras
+\usepackage{wrapfig} %Este pacote permite colocar figura no meio do texto
+%Cores personalizadas
+\definecolor{minhacorrgb}{RGB}{85,158,131} %define cor personalizada
 
 %%&&&&&&&&&&&&&&&&
 %%	PARÂMETROS  &&
@@ -26,8 +34,35 @@
 
 \begin{document}
 	%%
+	%%	ESTUDO CAPA
+	\title{ \textbf{ESTUDO DE LATEX} } %cria título
+	\author{ \textit{Helio M. Andrade Jr.} } %cria autor
+	\date{11 de abril de 2019} %cria data
+	\maketitle %gera título baseado nos parâmetros acima
+	%%
+	%% ESTUDO NUMERAÇÃO PÁGINA
+	\thispagestyle{empty} %Oculta numeração de páginas
+	\newpage
+	
+	
+	%%
+	%%	ESTUDO CONTENT
+	
+	%%%
+	\setcounter{page}{1} %reseta contagem de páginas
+	\pagenumbering{roman} %altera numeração página para algorismo romano (para maiúsculo usar Roman)
+	
+	\tableofcontents %cria sumário
+	\newpage
+	
+	\listoffigures
+	\newpage
+	
+	%%
 	%% 	ESTUDO SEÇÕES
 	%%
+	\setcounter{page}{1}  %reseta contagem de páginas (boa prática deixar explícito)
+	\pagenumbering{arabic} %altera numeração página para algorismo arábico
 	\section{Título grand\~ao}
 		Ac turpis egestas sed tempus urna et pharetra pharetra. Sit amet nisl purus in. At quis risus sed vulputate odio ut. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Quis vel eros donec ac odio tempor orci dapibus. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Ornare suspendisse sed nisi lacus sed viverra tellus. Aliquet nibh praesent tristique magna sit amet purus gravida. Risus at ultrices mi tempus. Eu sem integer vitae justo eget magna. Diam ut venenatis tellus in metus vulputate eu scelerisque felis. Nunc sed augue lacus viverra vitae. Quis eleifend quam adipiscing vitae proin. Ante in nibh mauris cursus mattis. Scelerisque in dictum non consectetur a erat nam. Senectus et netus et malesuada fames ac turpis egestas. Id faucibus nisl tincidunt eget nullam. Scelerisque viverra mauris in aliquam sem fringilla ut.
 	\subsection{Título subseção}
@@ -63,10 +98,10 @@
 	\end{flushleft}
 	
 	\begin{tiny}
-		texto pequeno \\ %quebra linha
+		texto pequeno
 	\end{tiny}
 	
-	Texto normal \\ %quebra linha
+	Texto normal
 	
 	{\Huge TEXTO GIGANTE}
 	
@@ -83,8 +118,8 @@
 			Urna duis convallis convallis tellus id. Eget felis eget nunc lobortis mattis aliquam. Eget felis eget nunc lobortis mattis aliquam. Auctor augue mauris augue neque gravida in fermentum. Aliquam sem et tortor consequat id porta nibh venenatis. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra. Urna nunc id cursus metus aliquam eleifend mi. Sit amet tellus cras adipiscing enim eu turpis. Amet consectetur adipiscing elit pellentesque. Consequat nisl vel pretium lectus quam id leo in vitae.
 		\end{onehalfspace}
 	
-		\space{1.5cm} %Espaçamento personalizado entre linhas
-			Libero volutpat sed cras ornare arcu dui vivamus. Pharetra convallis posuere morbi leo urna molestie. Quis imperdiet massa tincidunt nunc pulvinar sapien. Purus faucibus ornare suspendisse sed nisi. In dictum non consectetur a erat nam. Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. Varius quam quisque id diam vel quam. Facilisis sed odio morbi quis commodo odio aenean. Ornare arcu odio ut sem nulla. Dictumst quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices.
+		\setstretch{2.5} %Espaçamento personalizado entre linhas
+		Libero volutpat sed cras ornare arcu dui vivamus. Pharetra convallis posuere morbi leo urna molestie. Quis imperdiet massa tincidunt nunc pulvinar sapien. Purus faucibus ornare suspendisse sed nisi. In dictum non consectetur a erat nam. Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. Varius quam quisque id diam vel quam. Facilisis sed odio morbi quis commodo odio aenean. Ornare arcu odio ut sem nulla. Dictumst quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices.
 			
 		\begin{spacing}{0.5} %Espaçamento perosnalizado entre linhas usando begin|end
 			Pretium viverra suspendisse potenti nullam ac tortor vitae. Duis at consectetur lorem donec massa. Massa tincidunt nunc pulvinar sapien et ligula. Risus in hendrerit gravida rutrum quisque non tellus orci ac. Risus quis varius quam quisque id diam vel quam elementum. At tempor commodo ullamcorper a lacus vestibulum. Interdum velit euismod in pellentesque massa placerat. Feugiat in ante metus dictum at tempor commodo ullamcorper. Sodales ut eu sem integer vitae justo. Magna sit amet purus gravida quis blandit turpis. Porta lorem mollis aliquam ut porttitor leo a diam. Mus mauris vitae ultricies leo integer malesuada. At in tellus integer feugiat. Malesuada fames ac turpis egestas sed tempus urna et pharetra.
@@ -99,8 +134,127 @@
 	\subsubsection{Subsubseção Vertical Space}
 		\vspace{1.5cm} %altera espaço VERTICAL entre parágrafos somado ao padrão
 		Volutpat commodo sed egestas egestas fringilla phasellus. Sit amet nisl suscipit adipiscing bibendum est ultricies integer. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Facilisis gravida neque convallis a cras semper. Venenatis a condimentum vitae sapien pellentesque habitant. Proin nibh nisl condimentum id venenatis a condimentum. Aliquam sem et tortor consequat id porta nibh. Semper feugiat nibh sed pulvinar. Mi eget mauris pharetra et. \vspace{1cm}Placerat vestibulum lectus mauris ultrices eros in. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Convallis aenean et tortor at risus. Aliquet bibendum enim facilisis gravida neque convallis a. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Sapien et ligula ullamcorper malesuada proin.
+	\newpage	
+	
+	%%
+	%%	ESTUDO CORES
+	%%
+	\section{Seção cores}
+	\pagecolor{yellow} %muda cor das páginas da atual em diante
+	\textcolor{red}{Textarium em vermelhus. Ac turpis egestas sed tempus urna et pharetra pharetra. Sit amet nisl purus in. At quis risus sed vulputate odio ut. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Quis vel eros donec ac odio tempor orci dapibus. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Ornare suspendisse sed nisi lacus sed viverra tellus. Aliquet nibh praesent tristique magna sit amet purus gravida.} 
+	
+	\begin{flushleft}
+		\colorbox{SkyBlue}{ %caixa de cor
+			\parbox{\textwidth}{%cria caia  {define largura da caixa igual largura do corpo do texto}
+				at ultrices mi tempus. Eu sem integer vitae justo eget magna. Diam ut venenatis tellus in metus vulputate eu scelerisque felis. Nunc sed augue lacus viverra vitae. Quis eleifend quam adipiscing vitae proin. Ante in nibh mauris cursus mattis. Scelerisque in dictum non consectetur a erat nam. Senectus et netus et malesuada fames ac turpis egestas. Id faucibus nisl tincidunt eget nullam. Scelerisque viverra mauris in aliquam sem fringilla ut.} }
+	\end{flushleft}
+	
+	
+	\newpage
+	
+	Libero volutpat sed cras ornare arcu dui vivamus. Pharetra convallis posuere morbi leo urna molestie. Quis imperdiet massa tincidunt nunc pulvinar sapien. Purus faucibus ornare suspendisse sed nisi. In dictum non consectetur a erat nam. Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. Varius quam quisque id diam vel quam. Facilisis sed odio morbi quis commodo odio aenean. Ornare arcu odio ut sem nulla. Dictumst quisque sagittis purus sit amet volutpat. Nulla posuere sollicitudin aliquam ultrices.
+	
+	Pretium viverra suspendisse potenti nullam ac tortor vitae. Duis at consectetur lorem donec massa. Massa tincidunt nunc pulvinar sapien et ligula. Risus in hendrerit gravida rutrum quisque non tellus orci ac. Risus quis varius quam quisque id diam vel quam elementum. At tempor commodo ullamcorper a lacus vestibulum. Interdum velit euismod in pellentesque massa placerat. Feugiat in ante metus dictum at tempor commodo ullamcorper. Sodales ut eu sem integer vitae justo. Magna sit amet purus gravida quis blandit turpis. Porta lorem mollis aliquam ut porttitor leo a diam. Mus mauris vitae ultricies leo integer malesuada. At in tellus integer feugiat. Malesuada fames ac turpis egestas sed tempus urna et pharetra.
+	
+	\newpage
+	%%
+	%%	ESTUDO LISTAS
+	%%
+	\pagecolor{white} %muda cor da página para branco
+	\section{Seção de listas}
+		Ac turpis egestas sed tempus urna et pharetra pharetra. Sit amet nisl purus in. At quis risus sed vulputate odio ut. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Quis vel eros donec ac odio tempor orci dapibus. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. 
 		
+		Lista não-ordenada:
+		\begin{itemize} % Lista não enumerada
+			\item Primeiro item
+			\item Segundo item
+				\begin{itemize}
+					\item primeiro sub item
+					\item segundo sub item
+						\begin{itemize}
+							\item sub sub item
+						\end{itemize}
+				\end{itemize}
+			\item Terceiro item
+		\end{itemize}
+		
+		Lista ordenada:
+		\begin{enumerate}
+			\item Numerado um
+				\begin{enumerate}
+					\item Subnumerado 1
+						\begin{itemize}
+							\item Item qualquer aí
+						\end{itemize}
+					\item Sumnumerado 2
+				\end{enumerate}
+			\item Numerado dois
+			\item Numerado três
+		\end{enumerate}
 	
+		Lista descritiva:
+		\begin{description}
+			\item[PRIMEIRO] fala alguma coisa sobre o primeiro item
+			\item[SEGUNDO] fala alguma coisa sobre o segundo item
+				\begin{description}
+					\item[Subitem descritivo] mais descrição aqui, eta carai.
+				\end{description}
+		\end{description}
+	\newpage
 	
+	%%
+	%%	Estudos Figuras
+	%%
+	\section{Seção Figuras}
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa eget egestas purus viverra accumsan in nisl. A condimentum vitae sapien pellentesque habitant morbi. Erat velit scelerisque in dictum non consectetur. Fringilla urna porttitor rhoncus dolor purus non enim praesent. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Posuere urna nec tincidunt praesent semper feugiat nibh sed. Nibh tellus molestie nunc non blandit. Aliquam id diam maecenas ultricies mi eget. Consectetur libero id faucibus nisl. Metus dictum at tempor commodo ullamcorper. Fringilla urna porttitor rhoncus dolor. Morbi leo urna molestie at elementum. Eu consequat ac felis donec et. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Nunc mi ipsum faucibus vitae aliquet nec.
+		
+		\begin{figure}[H] % [H] coloca imagem em posição precisamente igual no código
+			\centering
+			\includegraphics[width=0.7\linewidth]{figuras/birb_01}
+			\caption[Legenda curta do birb trabalhador]{Legenda longa do birb trabalhador}
+			\label{fig:birb01}
+		\end{figure}
+
+		Ipsum dolor sit amet consectetur adipiscing elit. Elementum tempus egestas sed sed risus. Proin nibh nisl condimentum id venenatis a condimentum vitae. Massa enim nec dui nunc mattis enim ut tellus. In est ante in nibh mauris cursus. Dignissim cras tincidunt lobortis feugiat. Cras semper auctor neque vitae. Metus dictum at tempor commodo. Sit amet est placerat in egestas erat imperdiet sed euismod. Ultrices tincidunt arcu non sodales neque sodales ut. Consequat interdum varius sit amet mattis vulputate enim. Metus aliquam eleifend mi in nulla posuere. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Lectus urna duis convallis convallis tellus. Morbi tristique senectus et netus et malesuada fames. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. At ultrices mi tempus imperdiet. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Egestas pretium aenean pharetra magna ac placerat.
+		
+		%Figuras com subfiguras
+		\begin{figure}[H]
+			\centering
+			\caption[Legenda curta do birb BIRL]{Legenda longa do birb BIRL}
+			\begin{subfigure}[b]{0.3\textwidth}
+				\includegraphics[width=\linewidth]{figuras/birb_02a}
+				\caption{Birl hawk}
+				\label{fig:birlhawk}
+			\end{subfigure}
+			~ %adciona espaço entre as figuras na linha
+			\begin{subfigure}[b]{0.3\textwidth}
+				\includegraphics[width=\linewidth]{figuras/birb_02b}
+				\caption{Birl owl}
+				\label{fig:birlowl}
+			\end{subfigure}
+			\quad
+			\begin{subfigure}[b]{0.3\textwidth}
+				\includegraphics[width=\linewidth]{figuras/birb_02c}
+				\caption{Birl chicken}
+				\label{fig:birlchicken}
+			\end{subfigure}
+			\label{fig:birb02}
+		\end{figure}
+	
+		Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Malesuada fames ac turpis egestas. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Magna sit amet purus gravida quis blandit. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Arcu non sodales neque sodales ut etiam sit amet. Velit laoreet id donec ultrices. Morbi tristique senectus et netus et malesuada fames ac turpis. Nunc sed augue lacus viverra vitae congue eu consequat. Justo eget magna fermentum iaculis eu non. Ridiculus mus mauris vitae ultricies. Tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Ut venenatis tellus in metus vulputate eu scelerisque. Viverra maecenas accumsan lacus vel facilisis. Blandit libero volutpat sed cras ornare arcu. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Lectus quam id leo in vitae turpis massa sed elementum.
+		\newpage
+		
+		\begin{wrapfigure}{r}{0.5\textwidth}
+			\vspace{-10pt}
+			\begin{center}
+				\includegraphics[width=0.48\textwidth]{figuras/birb_03}
+			\end{center}
+			\vspace{-20pt} %Diminui espaço entre legenda e imagem
+			\caption[Legenda curta do birb puto]{Legenda longa do birb puto}
+			\vspace{-10pt} %Diminiui espaço vertical entre legenda e texto
+			\label{fig:birb03}
+		\end{wrapfigure}
+	
+		Turpis egestas pretium aenean pharetra magna ac placerat. Sed adipiscing diam donec adipiscing tristique risus nec. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Sagittis eu volutpat odio facilisis mauris sit. Faucibus vitae aliquet nec ullamcorper sit amet risus. Egestas maecenas pharetra convallis posuere morbi leo. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Malesuada fames ac turpis egestas integer eget aliquet nibh. Sed risus ultricies tristique nulla aliquet. Adipiscing commodo elit at imperdiet dui accumsan. Orci phasellus egestas tellus rutrum tellus pellentesque. Ultricies mi quis hendrerit dolor. Vehicula ipsum a arcu cursus. Arcu bibendum at varius vel pharetra vel. Et tortor at risus viverra adipiscing at in tellus integer. Tincidunt tortor aliquam nulla facilisi cras fermentum odio. Tortor condimentum lacinia quis vel eros donec ac odio tempor.
 \end{document}
 		
