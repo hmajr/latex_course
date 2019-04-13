@@ -10,8 +10,10 @@
 \usepackage{setspace} %Este pacote altera espaçamento entre linhas
 \usepackage[a4paper, left=1cm, right=2cm, top=2cm, bottom=3cm]{geometry} %Este pacote altera margem do documento
 \usepackage[usenames, dvipsnames]{xcolor} %Modifica as cores [pacotes adcionais de cores]
-
-
+\usepackage{graphicx} %Este pacote adciona suporte a figuras
+\usepackage{float} %Este pacote força posicionamento de figuras
+\usepackage{subcaption} %Este pacote adciona suporte subfiguras
+\usepackage{wrapfig} %Este pacote permite colocar figura no meio do texto
 %Cores personalizadas
 \definecolor{minhacorrgb}{RGB}{85,158,131} %define cor personalizada
 
@@ -51,6 +53,9 @@
 	\pagenumbering{roman} %altera numeração página para algorismo romano (para maiúsculo usar Roman)
 	
 	\tableofcontents %cria sumário
+	\newpage
+	
+	\listoffigures
 	\newpage
 	
 	%%
@@ -195,5 +200,61 @@
 					\item[Subitem descritivo] mais descrição aqui, eta carai.
 				\end{description}
 		\end{description}
+	\newpage
+	
+	%%
+	%%	Estudos Figuras
+	%%
+	\section{Seção Figuras}
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa eget egestas purus viverra accumsan in nisl. A condimentum vitae sapien pellentesque habitant morbi. Erat velit scelerisque in dictum non consectetur. Fringilla urna porttitor rhoncus dolor purus non enim praesent. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Posuere urna nec tincidunt praesent semper feugiat nibh sed. Nibh tellus molestie nunc non blandit. Aliquam id diam maecenas ultricies mi eget. Consectetur libero id faucibus nisl. Metus dictum at tempor commodo ullamcorper. Fringilla urna porttitor rhoncus dolor. Morbi leo urna molestie at elementum. Eu consequat ac felis donec et. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Nunc mi ipsum faucibus vitae aliquet nec.
+		
+		\begin{figure}[H] % [H] coloca imagem em posição precisamente igual no código
+			\centering
+			\includegraphics[width=0.7\linewidth]{figuras/birb_01}
+			\caption[Legenda curta do birb trabalhador]{Legenda longa do birb trabalhador}
+			\label{fig:birb01}
+		\end{figure}
+
+		Ipsum dolor sit amet consectetur adipiscing elit. Elementum tempus egestas sed sed risus. Proin nibh nisl condimentum id venenatis a condimentum vitae. Massa enim nec dui nunc mattis enim ut tellus. In est ante in nibh mauris cursus. Dignissim cras tincidunt lobortis feugiat. Cras semper auctor neque vitae. Metus dictum at tempor commodo. Sit amet est placerat in egestas erat imperdiet sed euismod. Ultrices tincidunt arcu non sodales neque sodales ut. Consequat interdum varius sit amet mattis vulputate enim. Metus aliquam eleifend mi in nulla posuere. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Lectus urna duis convallis convallis tellus. Morbi tristique senectus et netus et malesuada fames. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. At ultrices mi tempus imperdiet. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Egestas pretium aenean pharetra magna ac placerat.
+		
+		%Figuras com subfiguras
+		\begin{figure}[H]
+			\centering
+			\caption[Legenda curta do birb BIRL]{Legenda longa do birb BIRL}
+			\begin{subfigure}[b]{0.3\textwidth}
+				\includegraphics[width=\linewidth]{figuras/birb_02a}
+				\caption{Birl hawk}
+				\label{fig:birlhawk}
+			\end{subfigure}
+			~ %adciona espaço entre as figuras na linha
+			\begin{subfigure}[b]{0.3\textwidth}
+				\includegraphics[width=\linewidth]{figuras/birb_02b}
+				\caption{Birl owl}
+				\label{fig:birlowl}
+			\end{subfigure}
+			\quad
+			\begin{subfigure}[b]{0.3\textwidth}
+				\includegraphics[width=\linewidth]{figuras/birb_02c}
+				\caption{Birl chicken}
+				\label{fig:birlchicken}
+			\end{subfigure}
+			\label{fig:birb02}
+		\end{figure}
+	
+		Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Malesuada fames ac turpis egestas. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Magna sit amet purus gravida quis blandit. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus. Arcu non sodales neque sodales ut etiam sit amet. Velit laoreet id donec ultrices. Morbi tristique senectus et netus et malesuada fames ac turpis. Nunc sed augue lacus viverra vitae congue eu consequat. Justo eget magna fermentum iaculis eu non. Ridiculus mus mauris vitae ultricies. Tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Ut venenatis tellus in metus vulputate eu scelerisque. Viverra maecenas accumsan lacus vel facilisis. Blandit libero volutpat sed cras ornare arcu. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Lectus quam id leo in vitae turpis massa sed elementum.
+		\newpage
+		
+		\begin{wrapfigure}{r}{0.5\textwidth}
+			\vspace{-10pt}
+			\begin{center}
+				\includegraphics[width=0.48\textwidth]{figuras/birb_03}
+			\end{center}
+			\vspace{-20pt} %Diminui espaço entre legenda e imagem
+			\caption[Legenda curta do birb puto]{Legenda longa do birb puto}
+			\vspace{-10pt} %Diminiui espaço vertical entre legenda e texto
+			\label{fig:birb03}
+		\end{wrapfigure}
+	
+		Turpis egestas pretium aenean pharetra magna ac placerat. Sed adipiscing diam donec adipiscing tristique risus nec. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Sagittis eu volutpat odio facilisis mauris sit. Faucibus vitae aliquet nec ullamcorper sit amet risus. Egestas maecenas pharetra convallis posuere morbi leo. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Malesuada fames ac turpis egestas integer eget aliquet nibh. Sed risus ultricies tristique nulla aliquet. Adipiscing commodo elit at imperdiet dui accumsan. Orci phasellus egestas tellus rutrum tellus pellentesque. Ultricies mi quis hendrerit dolor. Vehicula ipsum a arcu cursus. Arcu bibendum at varius vel pharetra vel. Et tortor at risus viverra adipiscing at in tellus integer. Tincidunt tortor aliquam nulla facilisi cras fermentum odio. Tortor condimentum lacinia quis vel eros donec ac odio tempor.
 \end{document}
 		
