@@ -9,3 +9,4 @@
 \contentsline {section}{\numberline {4}Se\IeC {\c c}\IeC {\~a}o de listas}{7}% 
 \contentsline {section}{\numberline {5}Se\IeC {\c c}\IeC {\~a}o Figuras}{8}% 
 \contentsline {section}{\numberline {6}Se\IeC {\c c}\IeC {\~a}o das tabelas}{11}% 
+\contentsline {section}{\numberline {7}Se\IeC {\c c}\IeC {\~a}o matem\IeC {\'a}tica}{13}% 
