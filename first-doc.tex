@@ -14,6 +14,16 @@
 \usepackage{float} %Este pacote força posicionamento de figuras
 \usepackage{subcaption} %Este pacote adciona suporte subfiguras
 \usepackage{wrapfig} %Este pacote permite colocar figura no meio do texto
+\usepackage{multirow} %Este pacote adciona suporte mesclagem linhas
+\usepackage{tabularx} %Este pacote permite personalizaçao margens da tabela
+\usepackage{amsmath} %Este pacote inclui modo matemático
+\usepackage{natbib} %Este pacote adciona opções de citações
+
+%% Redefinição de comandos matemáticos
+%%
+\renewcommand{\sin}{\mathrm{ sen\hspace{0.5mm} }}
+\renewcommand{\tan}{\mathrm{ tg\hspace{0.5mm} }}
+
 %Cores personalizadas
 \definecolor{minhacorrgb}{RGB}{85,158,131} %define cor personalizada
 
@@ -55,7 +65,10 @@
 	\tableofcontents %cria sumário
 	\newpage
 	
-	\listoffigures
+	\listoffigures %cria sumário de figuras
+	\newpage
+	
+	\listoftables %cria sumário de tabelas
 	\newpage
 	
 	%%
@@ -65,13 +78,14 @@
 	\pagenumbering{arabic} %altera numeração página para algorismo arábico
 	\section{Título grand\~ao}
 		Ac turpis egestas sed tempus urna et pharetra pharetra. Sit amet nisl purus in. At quis risus sed vulputate odio ut. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Quis vel eros donec ac odio tempor orci dapibus. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Ornare suspendisse sed nisi lacus sed viverra tellus. Aliquet nibh praesent tristique magna sit amet purus gravida. Risus at ultrices mi tempus. Eu sem integer vitae justo eget magna. Diam ut venenatis tellus in metus vulputate eu scelerisque felis. Nunc sed augue lacus viverra vitae. Quis eleifend quam adipiscing vitae proin. Ante in nibh mauris cursus mattis. Scelerisque in dictum non consectetur a erat nam. Senectus et netus et malesuada fames ac turpis egestas. Id faucibus nisl tincidunt eget nullam. Scelerisque viverra mauris in aliquam sem fringilla ut.
-	\subsection{Título subseção}
-		Volutpat commodo sed egestas egestas fringilla phasellus. Sit amet nisl suscipit adipiscing bibendum est ultricies integer. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Facilisis gravida neque convallis a cras semper. Venenatis a condimentum vitae sapien pellentesque habitant. Proin nibh nisl condimentum id venenatis a condimentum. Aliquam sem et tortor consequat id porta nibh. Semper feugiat nibh sed pulvinar. Mi eget mauris pharetra et. Placerat vestibulum lectus mauris ultrices eros in. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Convallis aenean et tortor at risus. Aliquet bibendum enim facilisis gravida neque convallis a. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Sapien et ligula ullamcorper malesuada proin.
-	\subsubsection{Título de subsubseção}
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		
-		%Espaço cria novo parágrafo
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		\subsection{Título subseção}
+		\label{subsec:tit_subsec}
+			Volutpat commodo sed egestas egestas fringilla phasellus. Sit amet nisl suscipit adipiscing bibendum est ultricies integer. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Facilisis gravida neque convallis a cras semper. Venenatis a condimentum vitae sapien pellentesque habitant. Proin nibh nisl condimentum id venenatis a condimentum. Aliquam sem et tortor consequat id porta nibh. Semper feugiat nibh sed pulvinar. Mi eget mauris pharetra et. Placerat vestibulum lectus mauris ultrices eros in. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Convallis aenean et tortor at risus. Aliquet bibendum enim facilisis gravida neque convallis a. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Sapien et ligula ullamcorper malesuada proin.
+		\subsubsection{Título de subsubseção}
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+			%Espaço cria novo parágrafo
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		\newpage %quebra página
 
 	%%
@@ -256,5 +270,187 @@
 		\end{wrapfigure}
 	
 		Turpis egestas pretium aenean pharetra magna ac placerat. Sed adipiscing diam donec adipiscing tristique risus nec. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Sagittis eu volutpat odio facilisis mauris sit. Faucibus vitae aliquet nec ullamcorper sit amet risus. Egestas maecenas pharetra convallis posuere morbi leo. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Malesuada fames ac turpis egestas integer eget aliquet nibh. Sed risus ultricies tristique nulla aliquet. Adipiscing commodo elit at imperdiet dui accumsan. Orci phasellus egestas tellus rutrum tellus pellentesque. Ultricies mi quis hendrerit dolor. Vehicula ipsum a arcu cursus. Arcu bibendum at varius vel pharetra vel. Et tortor at risus viverra adipiscing at in tellus integer. Tincidunt tortor aliquam nulla facilisi cras fermentum odio. Tortor condimentum lacinia quis vel eros donec ac odio tempor.
+		\newpage
+		
+		%%
+		%%	ESTUDO TABELAS
+		%%
+		\section{Seção das tabelas}
+			Orci a scelerisque purus semper eget duis at tellus at. Molestie at elementum eu facilisis sed. Adipiscing tristique risus nec feugiat in fermentum posuere urna. A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Etiam erat velit scelerisque in dictum non. Arcu cursus vitae congue mauris rhoncus aenean. Sed augue lacus viverra vitae congue eu consequat. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus et. Hendrerit gravida rutrum quisque non. Et netus et malesuada fames ac turpis egestas maecenas. Id cursus metus aliquam eleifend mi in. Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae.
+			
+			\begin{table}[H]
+				\centering
+				\caption[Legenda curta da tabela]{Legenda longa da tabela}
+				\label{tab:tab1}
+				\begin{tabular}{ l|l|l } % | reprensa as bordas verticais, l (alinhando a esquerda)
+					%\hline %linha horizontal
+					A1 & B1 & C1 \\ \hline 
+					A2 & B2 & C2 \\ \hline
+					A3 & B3 & C3 \\ %\hline
+				\end{tabular}
+				\vspace{-30pt}
+			\end{table}
+		
+			Pellentesque elit ullamcorper dignissim cras tincidunt. Sit amet volutpat consequat mauris nunc. Odio eu feugiat pretium nibh. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. Elementum sagittis vitae et leo. Massa massa ultricies mi quis hendrerit dolor magna. Scelerisque purus semper eget duis at. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Diam vel quam elementum pulvinar. Tincidunt arcu non sodales neque sodales ut etiam. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices. Id porta nibh venenatis cras. Ullamcorper malesuada proin libero nunc. Malesuada fames ac turpis egestas sed tempus urna et. Ultricies mi quis hendrerit dolor magna eget est. Odio aenean sed adipiscing diam donec adipiscing tristique. Egestas pretium aenean pharetra magna ac placerat vestibulum. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae.
+			
+			\begin{table}[H] %H define 
+				\centering
+				\caption[Legenda curta da tabela 2]{Legenda longa da tabela 2}
+				\label{tab:tab2}
+				\begin{tabular}{|l|l|l|}
+					\hline
+					A1 & \multicolumn{2}{l|}{B1} \\ \hline %comando multicolumn para especificar quantas células mesclar {coluna}{Align |(borda)}{conteúdo}
+					A2 & B2         & C2         \\ \hline
+					A3 & B3         & C3         \\ \hline
+				\end{tabular}
+			\end{table}
+			
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa eget egestas purus viverra accumsan in nisl. A condimentum vitae sapien pellentesque habitant morbi. Erat velit scelerisque in dictum non consectetur. Fringilla urna porttitor rhoncus dolor purus non enim praesent. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Posuere urna nec tincidunt praesent semper feugiat nibh sed. Nibh tellus molestie nunc non blandit. Aliquam id diam maecenas ultricies mi eget. Consectetur libero id faucibus nisl. Metus dictum at tempor commodo ullamcorper. Fringilla urna porttitor rhoncus dolor. Morbi leo urna molestie at elementum. Eu consequat ac felis donec et. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Nunc mi ipsum faucibus vitae aliquet nec.
+
+			\renewcommand{\arraystretch}{3} %altera as margens verticais das tabelas a partir daqui
+			\begin{table}[H]
+				\centering
+				\caption[Legenda curta da tabela 3]{Legenda longa da tabela 3}
+				\label{tab:tab3}
+				\begin{tabularx}{0.5\textwidth}{|X|X|X|} % X indica quais colunas devem ser expandidas
+					\hline
+					\centering A1 & \multicolumn{2}{c|} %multicolumn mesclagem de colunas ; {c|} centraliza o texto {\multirow{2}{*}{B1}}
+									 {\multirow{2}{*}{B1}} %multirow define númeno de linhas para mesclar
+									 \\ \cline{1-1} %indica de que célula até qual célula a borda vai
+					\hfill A2 & \multicolumn{2}{l|}{}                    \\ \hline %hfill alinha a direita
+					A3 & B3                  & C3                 \\ \hline
+				\end{tabularx}
+				\vspace{-20pt}
+			\end{table}
+			\renewcommand{\arraystretch}{1}
+			
+			Ipsum dolor sit amet consectetur adipiscing elit. Elementum tempus egestas sed sed risus. Proin nibh nisl condimentum id venenatis a condimentum vitae. Massa enim nec dui nunc mattis enim ut tellus. In est ante in nibh mauris cursus. Dignissim cras tincidunt lobortis feugiat. Cras semper auctor neque vitae. Metus dictum at tempor commodo. Sit amet est placerat in egestas erat imperdiet sed euismod. Ultrices tincidunt arcu non sodales neque sodales ut. Consequat interdum varius sit amet mattis vulputate enim. Metus aliquam eleifend mi in nulla posuere. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Lectus urna duis convallis convallis tellus. Morbi tristique senectus et netus et malesuada fames. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. At ultrices mi tempus imperdiet. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Egestas pretium aenean pharetra magna ac placerat.
+			\newpage
+			
+			%%
+			%%	SEÇÃO MATEMÁTICA
+			%%
+			
+			\section{Seção matemática}
+			%%ESTUDO DE EQUAÇÕES
+			%%
+			\subsection{Ambiente de equações}
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Duis at tellus at urna condimentum mattis pellentesque. Tincidunt arcu non sodales neque sodales ut etiam sit. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Bibendum ut tristique et egestas quis ipsum. 
+				Este é uma equação de segundo grau: $ ax^2 +bx +c = 0$. %Equação inline
+				
+				A solução é:
+				\begin{equation} %ambiente de equações numerada
+					x = \frac{-b \pm \sqrt{b^2 -4ac}}{2a}
+				\end{equation}
+				
+				\begin{equation*} %ambiente de equações NÃO numerada
+					x' = \frac{-b + \sqrt{b^2 -4ac}}{2a}
+				\end{equation*}
+				
+				\begin{equation} %ambiente de equações numerada (continuação da contagem)
+					x'' = \frac{-b - \sqrt{b^2 -4ac}}{2a}
+				\end{equation}
+				
+				\begin{equation*}
+					\begin{array}{cc}
+						x_1 = \dfrac{-b + \sqrt{b^2 -4ac}}{2a}, & %\dfrac deixa as equações do mesmo tamanho das acimas
+						x_2 = \dfrac{-b + \sqrt{b^2 -4ac}}{2a} \\ 
+					\end{array}
+				\end{equation*} 
+				
+				Etiam erat velit scelerisque in dictum non consectetur a erat. Tellus at urna condimentum mattis pellentesque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Magnis dis parturient montes nascetur. Amet venenatis urna cursus eget nunc scelerisque viverra mauris in. 
+				\newpage
+			%% ESTUDO DE MATRIZES
+			%%
+			\subsection{Matrizes}
+				Porttitor lacus luctus accumsan tortor posuere. Sed risus pretium quam vulputate dignissim suspendisse in est. Nunc vel risus commodo viverra maecenas. Tristique sollicitudin nibh sit amet. Condimentum mattis pellentesque id nibh. Porttitor leo a diam sollicitudin tempor id eu nisl nunc. Nisi quis eleifend quam adipiscing vitae proin sagittis nisl. Netus et malesuada fames ac turpis. 
+ 				
+ 				Diferentes tipos de matrizes \textbf{matrix} (sem bordas), \textbf{bmatrix} (com chaves), \textbf{pmatrix} (com parênteses), \textbf{vmatrix} (com barras), \textbf{Vmatrix} (barras duplas):
+ 				\begin{equation*}
+ 					\begin{array}{cc}
+	 					\begin{matrix}
+		 					1 & 0 & 0 \\ 
+		 					0 & 1 & 0 \\ 
+		 					0 & 0 & 1
+	 					\end{matrix} &  
+	 					\begin{bmatrix}
+		 					1 & 0 & 0 \\ 
+		 					0 & 1 & 0 \\ 
+		 					0 & 0 & 1
+	 					\end{bmatrix} \\ 
+	 					
+	 					\begin{pmatrix}
+		 					1 & 0 & 0 \\ 
+		 					0 & 1 & 0 \\ 
+		 					0 & 0 & 1
+	 					\end{pmatrix} & 
+	 					\begin{vmatrix}
+		 					1 & 0 & 0 \\ 
+		 					0 & 1 & 0 \\ 
+		 					0 & 0 & 1
+	 					\end{vmatrix} 
+ 					\end{array} 
+ 				\end{equation*} 
+ 				
+ 				
+ 				
+				Consectetur lorem donec massa sapien faucibus et molestie ac. Suspendisse in est ante in nibh mauris cursus mattis molestie. Purus gravida quis blandit turpis cursus in hac habitasse platea. Suscipit adipiscing bibendum est ultricies. Viverra adipiscing at in tellus integer feugiat scelerisque. Urna duis convallis convallis tellus id interdum velit laoreet id. Amet justo donec enim diam vulputate. Lectus arcu bibendum at varius. Felis donec et odio pellentesque diam volutpat commodo. Egestas integer eget aliquet nibh. Nec sagittis aliquam malesuada bibendum. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur.
+			\subsection{Redefinição de comandos}
+				Tortor at risus viverra adipiscing at in tellus integer feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus. Lacus viverra vitae congue eu consequat ac felis donec. 
+				Comandos traduzidos:
+				
+				\begin{equation*}
+					\sin{2x^2}
+				\end{equation*}
+				
+				\begin{equation*}
+					\tan{2x^2}
+				\end{equation*}
+				Et egestas quis ipsum suspendisse ultrices. Sed risus pretium quam vulputate. Nec sagittis aliquam malesuada bibendum arcu vitae. Donec ultrices tincidunt arcu non sodales neque sodales ut etiam. Tincidunt augue interdum velit euismod in pellentesque massa placerat duis. Feugiat in fermentum posuere urna nec. Nunc pulvinar sapien et ligula ullamcorper. Blandit aliquam etiam erat velit scelerisque. Tortor posuere ac ut consequat semper viverra nam libero. Cras adipiscing enim eu turpis egestas. Pharetra magna ac placerat vestibulum lectus mauris ultrices. 
+				
+			\subsection{Boas práticas e erros comuns}
+				Tellus integer feugiat scelerisque varius morbi enim nunc. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Ultricies mi eget mauris pharetra et ultrices neque ornare. Tellus elementum sagittis vitae et leo duis ut diam. Lobortis feugiat vivamus at augue eget. Dictum varius duis at consectetur lorem donec. Sit amet nisl suscipit adipiscing. Eget velit aliquet sagittis id consectetur purus ut. Platea dictumst quisque sagittis purus sit amet. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Amet consectetur adipiscing elit ut aliquam purus sit. Volutpat blandit aliquam etiam erat velit scelerisque in. Turpis massa sed elementum tempus egestas.
+				Fraçoes:
+				
+				\begin{equation*}
+					(\frac{2a}{2b})
+				\end{equation*}
+				
+				\begin{equation*}
+					\left( \frac{2a}{2b} \right)
+				\end{equation*}
+				
+				Uso de colchetes:
+				
+				\begin{equation*}
+					{2a + 3b- 4c^2}
+				\end{equation*}
+				
+				\begin{equation*}
+					\{2a + 3b- 4c^2\}
+				\end{equation*}
+				
+				
+				
+	\newpage
+	%%
+	%%	ESTUDO DE BIBLIOGRAFIA
+	%%
+	\section{EStudo de bibliografia}
+		Commodo sed egestas egestas fringilla phasellus. Nulla porttitor massa id neque aliquam vestibulum. Aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus. Consequat mauris nunc congue nisi. Morbi leo urna molestie at elementum eu facilisis. Et molestie ac feugiat sed. At imperdiet dui accumsan sit. Diam ut venenatis tellus in metus. Pretium fusce id velit ut tortor pretium viverra. At lectus urna duis convallis convallis tellus. Ultricies tristique nulla aliquet enim tortor at. Nullam vehicula ipsum a arcu cursus vitae. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Scelerisque varius morbi enim nunc faucibus a pellentesque sit. Nec feugiat in fermentum posuere urna nec tincidunt praesent.\textbf{\citeauthor{agr_machines}}
+		
+		Commodo nulla facilisi nullam vehicula. A scelerisque purus semper eget duis at. Enim ut sem viverra aliquet eget sit amet tellus cras. Amet volutpat consequat mauris nunc congue nisi vitae. Amet volutpat consequat mauris nunc. Elementum eu facilisis sed odio morbi quis commodo.\textbf{\cite{practical_eletronics}} Ut placerat orci nulla pellentesque dignissim enim sit. At volutpat diam ut venenatis tellus in metus vulputate. Lorem donec massa sapien faucibus. Et malesuada fames ac turpis. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Urna porttitor rhoncus dolor purus non. Amet nulla facilisi morbi tempus iaculis urna id volutpat lacus. Integer feugiat scelerisque varius morbi enim nunc faucibus a pellentesque. Etiam non quam lacus suspendisse faucibus interdum posuere. Orci dapibus ultrices in iaculis nunc sed augue.
+		
+		\subsection{Referências de figuras, tabelas, seções e afins}
+			Ipsum dolor sit amet consectetur adipiscing elit. Elementum tempus egestas sed sed risus. Proin nibh nisl condimentum id venenatis a condimentum vitae. Referência de tabela \ref{tab:tab3}. In est ante in nibh mauris cursus. Referência de subseção \ref{subsec:tit_subsec}. Dignissim cras tincidunt lobortis feugiat. Cras semper auctor neque vitae. 
+			
+			Metus dictum at tempor commodo. Sit amet est placerat in egestas erat imperdiet sed euismod. Ultrices tincidunt arcu non sodales neque sodales ut. Consequat interdum varius sit amet mattis vulputate enim. Metus aliquam eleifend mi in nulla posuere. Citação de figuras, figura \ref{fig:birb02}Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Lectus urna duis convallis convallis tellus. Morbi tristique senectus et netus et malesuada fames. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. At ultrices mi tempus imperdiet. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Egestas pretium aenean pharetra magna ac placerat.
+	\newpage
+	
+	%Adciona bibliografia ao sumário
+	\addcontentsline{toc}{section}{Referências} % toc (TableOfContents), section (hierarquia), Referências (nome no sumário)
+	\bibliographystyle{apalike} %estilo da bibliografia e citações
+	\bibliography{first_bib} %qual bibliografia adcionar as referências
+	\nocite{alchemist_pauloc} %livro de referência não citado
 \end{document}
 		
