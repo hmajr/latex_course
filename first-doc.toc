@@ -12,3 +12,4 @@
 \contentsline {section}{\numberline {7}Se\IeC {\c c}\IeC {\~a}o matem\IeC {\'a}tica}{13}% 
 \contentsline {subsection}{\numberline {7.1}Ambiente de equa\IeC {\c c}\IeC {\~o}es}{13}% 
 \contentsline {subsection}{\numberline {7.2}Matrizes}{14}% 
+\contentsline {subsection}{\numberline {7.3}Redefini\IeC {\c c}\IeC {\~a}o de comandos}{14}% 
