@@ -16,6 +16,13 @@
 \usepackage{wrapfig} %Este pacote permite colocar figura no meio do texto
 \usepackage{multirow} %Este pacote adciona suporte mesclagem linhas
 \usepackage{tabularx} %Este pacote permite personalizaçao margens da tabela
+\usepackage{amsmath} %Este pacote inclui modo matemático
+
+%% Redefinição de comandos matemáticos
+%%
+\renewcommand{\sin}{\mathrm{ sen\hspace{0.5mm} }}
+\renewcommand{\tan}{\mathrm{ tg\hspace{0.5mm} }}
+
 %Cores personalizadas
 \definecolor{minhacorrgb}{RGB}{85,158,131} %define cor personalizada
 
@@ -298,7 +305,7 @@
 			
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa eget egestas purus viverra accumsan in nisl. A condimentum vitae sapien pellentesque habitant morbi. Erat velit scelerisque in dictum non consectetur. Fringilla urna porttitor rhoncus dolor purus non enim praesent. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Posuere urna nec tincidunt praesent semper feugiat nibh sed. Nibh tellus molestie nunc non blandit. Aliquam id diam maecenas ultricies mi eget. Consectetur libero id faucibus nisl. Metus dictum at tempor commodo ullamcorper. Fringilla urna porttitor rhoncus dolor. Morbi leo urna molestie at elementum. Eu consequat ac felis donec et. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Nunc mi ipsum faucibus vitae aliquet nec.
 
-			\renewcommand{\arraystretch}{3}
+			\renewcommand{\arraystretch}{3} %altera as margens verticais das tabelas a partir daqui
 			\begin{table}[H]
 				\centering
 				\caption[Legenda curta da tabela 3]{Legenda longa da tabela 3}
@@ -313,7 +320,116 @@
 				\end{tabularx}
 				\vspace{-20pt}
 			\end{table}
+			\renewcommand{\arraystretch}{1}
 			
 			Ipsum dolor sit amet consectetur adipiscing elit. Elementum tempus egestas sed sed risus. Proin nibh nisl condimentum id venenatis a condimentum vitae. Massa enim nec dui nunc mattis enim ut tellus. In est ante in nibh mauris cursus. Dignissim cras tincidunt lobortis feugiat. Cras semper auctor neque vitae. Metus dictum at tempor commodo. Sit amet est placerat in egestas erat imperdiet sed euismod. Ultrices tincidunt arcu non sodales neque sodales ut. Consequat interdum varius sit amet mattis vulputate enim. Metus aliquam eleifend mi in nulla posuere. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Lectus urna duis convallis convallis tellus. Morbi tristique senectus et netus et malesuada fames. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. At ultrices mi tempus imperdiet. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Egestas pretium aenean pharetra magna ac placerat.
+			\newpage
+			
+			%%
+			%%	SEÇÃO MATEMÁTICA
+			%%
+			
+			\section{Seção matemática}
+			%%ESTUDO DE EQUAÇÕES
+			%%
+			\subsection{Ambiente de equações}
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Duis at tellus at urna condimentum mattis pellentesque. Tincidunt arcu non sodales neque sodales ut etiam sit. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Bibendum ut tristique et egestas quis ipsum. 
+				Este é uma equação de segundo grau: $ ax^2 +bx +c = 0$. %Equação inline
+				
+				A solução é:
+				\begin{equation} %ambiente de equações numerada
+					x = \frac{-b \pm \sqrt{b^2 -4ac}}{2a}
+				\end{equation}
+				
+				\begin{equation*} %ambiente de equações NÃO numerada
+					x' = \frac{-b + \sqrt{b^2 -4ac}}{2a}
+				\end{equation*}
+				
+				\begin{equation} %ambiente de equações numerada (continuação da contagem)
+					x'' = \frac{-b - \sqrt{b^2 -4ac}}{2a}
+				\end{equation}
+				
+				\begin{equation*}
+					\begin{array}{cc}
+						x_1 = \dfrac{-b + \sqrt{b^2 -4ac}}{2a}, & %\dfrac deixa as equações do mesmo tamanho das acimas
+						x_2 = \dfrac{-b + \sqrt{b^2 -4ac}}{2a} \\ 
+					\end{array}
+				\end{equation*} 
+				
+				Etiam erat velit scelerisque in dictum non consectetur a erat. Tellus at urna condimentum mattis pellentesque. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Magnis dis parturient montes nascetur. Amet venenatis urna cursus eget nunc scelerisque viverra mauris in. 
+				\newpage
+			%% ESTUDO DE MATRIZES
+			%%
+			\subsection{Matrizes}
+				Porttitor lacus luctus accumsan tortor posuere. Sed risus pretium quam vulputate dignissim suspendisse in est. Nunc vel risus commodo viverra maecenas. Tristique sollicitudin nibh sit amet. Condimentum mattis pellentesque id nibh. Porttitor leo a diam sollicitudin tempor id eu nisl nunc. Nisi quis eleifend quam adipiscing vitae proin sagittis nisl. Netus et malesuada fames ac turpis. 
+ 				
+ 				Diferentes tipos de matrizes \textbf{matrix} (sem bordas), \textbf{bmatrix} (com chaves), \textbf{pmatrix} (com parênteses), \textbf{vmatrix} (com barras), \textbf{Vmatrix} (barras duplas):
+ 				\begin{equation*}
+ 					\begin{array}{cc}
+	 					\begin{matrix}
+		 					1 & 0 & 0 \\ 
+		 					0 & 1 & 0 \\ 
+		 					0 & 0 & 1
+	 					\end{matrix} &  
+	 					\begin{bmatrix}
+		 					1 & 0 & 0 \\ 
+		 					0 & 1 & 0 \\ 
+		 					0 & 0 & 1
+	 					\end{bmatrix} \\ 
+	 					
+	 					\begin{pmatrix}
+		 					1 & 0 & 0 \\ 
+		 					0 & 1 & 0 \\ 
+		 					0 & 0 & 1
+	 					\end{pmatrix} & 
+	 					\begin{vmatrix}
+		 					1 & 0 & 0 \\ 
+		 					0 & 1 & 0 \\ 
+		 					0 & 0 & 1
+	 					\end{vmatrix} 
+ 					\end{array} 
+ 				\end{equation*} 
+ 				
+ 				
+ 				
+				Consectetur lorem donec massa sapien faucibus et molestie ac. Suspendisse in est ante in nibh mauris cursus mattis molestie. Purus gravida quis blandit turpis cursus in hac habitasse platea. Suscipit adipiscing bibendum est ultricies. Viverra adipiscing at in tellus integer feugiat scelerisque. Urna duis convallis convallis tellus id interdum velit laoreet id. Amet justo donec enim diam vulputate. Lectus arcu bibendum at varius. Felis donec et odio pellentesque diam volutpat commodo. Egestas integer eget aliquet nibh. Nec sagittis aliquam malesuada bibendum. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur.
+			\subsection{Redefinição de comandos}
+				Tortor at risus viverra adipiscing at in tellus integer feugiat. Varius morbi enim nunc faucibus a pellentesque sit amet. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus. Lacus viverra vitae congue eu consequat ac felis donec. 
+				Comandos traduzidos:
+				
+				\begin{equation*}
+					\sin{2x^2}
+				\end{equation*}
+				
+				\begin{equation*}
+					\tan{2x^2}
+				\end{equation*}
+				Et egestas quis ipsum suspendisse ultrices. Sed risus pretium quam vulputate. Nec sagittis aliquam malesuada bibendum arcu vitae. Donec ultrices tincidunt arcu non sodales neque sodales ut etiam. Tincidunt augue interdum velit euismod in pellentesque massa placerat duis. Feugiat in fermentum posuere urna nec. Nunc pulvinar sapien et ligula ullamcorper. Blandit aliquam etiam erat velit scelerisque. Tortor posuere ac ut consequat semper viverra nam libero. Cras adipiscing enim eu turpis egestas. Pharetra magna ac placerat vestibulum lectus mauris ultrices. 
+				
+			\subsection{Boas práticas e erros comuns}
+				Tellus integer feugiat scelerisque varius morbi enim nunc. Quis enim lobortis scelerisque fermentum dui faucibus in ornare. Ultricies mi eget mauris pharetra et ultrices neque ornare. Tellus elementum sagittis vitae et leo duis ut diam. Lobortis feugiat vivamus at augue eget. Dictum varius duis at consectetur lorem donec. Sit amet nisl suscipit adipiscing. Eget velit aliquet sagittis id consectetur purus ut. Platea dictumst quisque sagittis purus sit amet. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Amet consectetur adipiscing elit ut aliquam purus sit. Volutpat blandit aliquam etiam erat velit scelerisque in. Turpis massa sed elementum tempus egestas.
+				Fraçoes:
+				
+				\begin{equation*}
+					(\frac{2a}{2b})
+				\end{equation*}
+				
+				\begin{equation*}
+					\left( \frac{2a}{2b} \right)
+				\end{equation*}
+				
+				Uso de colchetes:
+				
+				\begin{equation*}
+					{2a + 3b- 4c^2}
+				\end{equation*}
+				
+				\begin{equation*}
+					\{2a + 3b- 4c^2\}
+				\end{equation*}
+				
+				Commodo sed egestas egestas fringilla phasellus. Nulla porttitor massa id neque aliquam vestibulum. Aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus. Consequat mauris nunc congue nisi. Morbi leo urna molestie at elementum eu facilisis. Et molestie ac feugiat sed. At imperdiet dui accumsan sit. Diam ut venenatis tellus in metus. Pretium fusce id velit ut tortor pretium viverra. At lectus urna duis convallis convallis tellus. Ultricies tristique nulla aliquet enim tortor at. Nullam vehicula ipsum a arcu cursus vitae. Tempor commodo ullamcorper a lacus vestibulum sed arcu. Tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Scelerisque varius morbi enim nunc faucibus a pellentesque sit. Nec feugiat in fermentum posuere urna nec tincidunt praesent.
+				
+				Commodo nulla facilisi nullam vehicula. A scelerisque purus semper eget duis at. Enim ut sem viverra aliquet eget sit amet tellus cras. Amet volutpat consequat mauris nunc congue nisi vitae. Amet volutpat consequat mauris nunc. Elementum eu facilisis sed odio morbi quis commodo. Ut placerat orci nulla pellentesque dignissim enim sit. At volutpat diam ut venenatis tellus in metus vulputate. Lorem donec massa sapien faucibus. Et malesuada fames ac turpis. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Urna porttitor rhoncus dolor purus non. Amet nulla facilisi morbi tempus iaculis urna id volutpat lacus. Integer feugiat scelerisque varius morbi enim nunc faucibus a pellentesque. Etiam non quam lacus suspendisse faucibus interdum posuere. Orci dapibus ultrices in iaculis nunc sed augue.
 \end{document}
 		
