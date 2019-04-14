@@ -15,4 +15,5 @@
 \contentsline {subsection}{\numberline {7.3}Redefini\IeC {\c c}\IeC {\~a}o de comandos}{14}% 
 \contentsline {subsection}{\numberline {7.4}Boas pr\IeC {\'a}ticas e erros comuns}{15}% 
 \contentsline {section}{\numberline {8}EStudo de bibliografia}{16}% 
+\contentsline {subsection}{\numberline {8.1}Refer\IeC {\^e}ncias de figuras e tabelas}{16}% 
 \contentsline {section}{Refer\IeC {\^e}ncias}{17}% 
