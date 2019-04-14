@@ -10,3 +10,4 @@
 \contentsline {section}{\numberline {5}Se\IeC {\c c}\IeC {\~a}o Figuras}{8}% 
 \contentsline {section}{\numberline {6}Se\IeC {\c c}\IeC {\~a}o das tabelas}{11}% 
 \contentsline {section}{\numberline {7}Se\IeC {\c c}\IeC {\~a}o matem\IeC {\'a}tica}{13}% 
+\contentsline {subsection}{\numberline {7.1}Ambiente de equa\IeC {\c c}\IeC {\~o}es}{13}% 
