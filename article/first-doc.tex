@@ -512,7 +512,7 @@
 		\begin{table}[H] %H define 
 			\centering
 			\caption[Legenda curta da tabela 2]{Legenda longa da tabela 2}
-			\label{tab:tab2}
+			\label{tab:tab4}
 			\begin{tabular}{|l|l|l|}
 				\hline
 				A1 & \multicolumn{2}{l|}{B1} \\ \hline %comando multicolumn para especificar quantas células mesclar {coluna}{Align |(borda)}{conteúdo}
@@ -578,6 +578,7 @@
 		
 		\newpage
 	%Adciona bibliografia ao sumário
+	\SetWatermarkText{}
 	\addcontentsline{toc}{section}{Referências} % toc (TableOfContents), section (hierarquia), Referências (nome no sumário)
 	\bibliographystyle{apalike} %estilo da bibliografia e citações
 	\bibliography{first_bib} %qual bibliografia adcionar as referências
