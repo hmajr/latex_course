@@ -1,0 +1,4 @@
+\babel@toc {portuguese}{}
+\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{3}% 
+\contentsline {section}{\numberline {2}Desenvolvimento}{4}% 
+\contentsline {section}{\numberline {3}Conclus\IeC {\~a}o}{6}% 
