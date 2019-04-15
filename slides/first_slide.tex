@@ -28,7 +28,10 @@
 	\begin{frame}[plain] % [plain] : retira bordas, usado em primeiro slide
 		\maketitle % escreve título a partir das informações acima
 	\end{frame}
-
+	
+	%%
+	%%	ESTUDO SOBRE CRIAÇÃO DE FRAMES E BLOCOS
+	%%
 	\begin{frame}
 		\frametitle{Primeiro Frame}
 		Texto do frame em questão
@@ -37,6 +40,99 @@
 			Bloco de texto aleatório
 		\end{block}
 	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Slide pausado}
+		Texto do frame 2 em questão
+		
+		\begin{block}{Título do bloco}
+			Bloco de texto aleatório 1 \pause
+			
+			Bloco de texto aleatório 2 \pause
+			
+			Bloco de texto aleatório 3 
+		\end{block}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Slide de lista ordenada}
+		Texto qualquer falando sobre algo
+		\begin{enumerate}[<+->] %[<+->] + : na contagem de pausa o + acrescenta mais 1 
+			\item Item bla 
+			\item Item blabla 
+			\item Item blablabla
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Uso de uncover}
+		\begin{block}{Título do bloco}
+			\begin{itemize}
+				\uncover<1->{\item Qualquer abobrinha qualquer:} %
+				\uncover<3->
+				{
+					\begin{equation}
+						ax + b = 0
+					\end{equation}
+				}
+				
+				\uncover<2->{\item Outra abobrinha qualquer:}
+				\uncover<4->
+				{
+					\begin{equation}
+						x^2 + bx + c = 0
+					\end{equation}
+				}
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Uso de only}
+		\begin{block}{Título do bloco}
+			\begin{itemize}
+				\uncover<1->{\item Comando only não reserva espaço:}  
+				\only<3-> %\only{} não reserva espaço antes de exibir
+				{
+					\begin{equation}
+					ax + b = 0
+					\end{equation}
+				}
+				
+				\uncover<2->{\item Outra abobrinha qualquer:}
+				\only<4->
+				{
+					\begin{equation}
+					x^2 + bx + c = 0
+					\end{equation}
+				}
+			\end{itemize}
+		\end{block}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Uso de <?->}
+		\begin{block}{Título do bloco}
+			\begin{itemize}
+				\uncover<1-3>{\item Comando only não reserva espaço:}  % - : exibe elemento até pauxa X"
+				\only<3> %\only{} não reserva espaço antes de exibir
+				{
+					\begin{equation}
+					ax + b = 0
+					\end{equation}
+				}
+				
+				\uncover<2->{\item O item anterior foi ocultado na exibição da fórmula (pausa 4):}
+				\only<4->
+				{
+					\begin{equation}
+					x^2 + bx + c = 0
+					\end{equation}
+				}
+			\end{itemize}
+		\end{block}
+	\end{frame}
+	
 \end{document}
 	
 	
