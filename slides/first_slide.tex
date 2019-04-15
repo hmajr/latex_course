@@ -1,5 +1,7 @@
 \documentclass[14pt]{beamer}
 
+%% PACKAGE
+%%
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -11,21 +13,30 @@
 \usetheme{CambridgeUS}
 
 
+
 \begin{document}
-	\author{Helio M. Andrade}
-	\title{Apresentação LaTeX}
+	\author{Helio M Andrade}
+	\title{Estudo Slides LaTeX}
 	%\subtitle{}
-	%\logo{}
-	%\institute{}
+	\logo{ \includegraphics[height=2cm]{figuras/birb_logo}{\vspace{150pt}} }
+	\institute{Udemy}
 	%\date{}
 	%\subject{}
 	%\setbeamercovered{transparent}
 	%\setbeamertemplate{navigation symbols}{}
-	\begin{frame}[plain]
-	\maketitle
-\end{frame}
+	
+	\begin{frame}[plain] % [plain] : retira bordas, usado em primeiro slide
+		\maketitle % escreve título a partir das informações acima
+	\end{frame}
 
-\begin{frame}
-\frametitle{}
-\end{frame}
+	\begin{frame}
+		\frametitle{Primeiro Frame}
+		Texto do frame em questão
+		
+		\begin{block}{Título do bloco}
+			Bloco de texto aleatório
+		\end{block}
+	\end{frame}
 \end{document}
+	
+	
