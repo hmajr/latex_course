@@ -7,23 +7,36 @@
 %%	PACOTES  &&
 %%&&&&&&&&&&&&&
 
+%% Formatação do texto
 \usepackage[utf8]{inputenc} %Este pacote adciona suporte acentuação
 \usepackage[brazil]{babel} %Este pacote traduz comandos para pt-br
 \usepackage{indentfirst} %Este pacote identa primeiro parágrafo
 \usepackage{setspace} %Este pacote altera espaçamento entre linhas
+%% Margens
 \usepackage[a4paper, left=1cm, right=2cm, top=2cm, bottom=3cm]{geometry} %Este pacote altera margem do documento
+%% Cores
 \usepackage[usenames, dvipsnames]{xcolor} %Modifica as cores [pacotes adcionais de cores]
+%% Figuras
 \usepackage{graphicx} %Este pacote adciona suporte a figuras
 \usepackage{float} %Este pacote força posicionamento de figuras
 \usepackage{subcaption} %Este pacote adciona suporte subfiguras
 \usepackage{wrapfig} %Este pacote permite colocar figura no meio do texto
+%% Tabelas
 \usepackage{multirow} %Este pacote adciona suporte mesclagem linhas
 \usepackage{tabularx} %Este pacote permite personalizaçao margens da tabela
+%% Matemática
 \usepackage{amsmath} %Este pacote inclui modo matemático
-\usepackage{natbib} %Este pacote adciona opções de citações
+%% Bibliografia
+\usepackage{natbib} %Este pacote adciona opções de citações bibliograficas
+%% Colunas de texto
 \usepackage{multicol} %Este pacote adciona colunas personalizadas
+%% Notas de rodapé
 \usepackage[perpage]{footmisc} %Este pacote reseta contagem de rodapé por página
-\usepackage{csquotes} 
+%% Citações
+\usepackage{csquotes} %Este pacote adciona opções de quotes
+%%Marca dagua
+\usepackage{draftwatermark} %Este pacote adciona suporte marca dagua
+\usepackage{transparent} %Este pacote adciona suporte transparencia
 
 %%&&&&&&&&&&&&&&&&
 %%	PARÂMETROS  &&
@@ -58,6 +71,7 @@
 %%&&&&&&&&&&&&&%%
 
 \begin{document}
+	\SetWatermarkText{}
 	%%
 	%%	ESTUDO CAPA
 	\title{ \textbf{ESTUDO DE LATEX} } %cria título
@@ -91,6 +105,10 @@
 	%%
 	\setcounter{page}{1}  %reseta contagem de páginas (boa prática deixar explícito)
 	\pagenumbering{arabic} %altera numeração página para algorismo arábico
+	
+	%% Marca D'água
+	\SetWatermarkText{\transparent{0.3}\includegraphics[width=0.5\linewidth]{figuras/birb_01}}
+	
 	\section{Título grand\~ao}
 		Ac turpis egestas sed tempus urna et pharetra pharetra. Sit amet nisl purus in. At quis risus sed vulputate odio ut. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Quis vel eros donec ac odio tempor orci dapibus. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Ornare suspendisse sed nisi lacus sed viverra tellus. Aliquet nibh praesent tristique magna sit amet purus gravida. Risus at ultrices mi tempus. Eu sem integer vitae justo eget magna. Diam ut venenatis tellus in metus vulputate eu scelerisque felis. Nunc sed augue lacus viverra vitae. Quis eleifend quam adipiscing vitae proin. Ante in nibh mauris cursus mattis. Scelerisque in dictum non consectetur a erat nam. Senectus et netus et malesuada fames ac turpis egestas. Id faucibus nisl tincidunt eget nullam. Scelerisque viverra mauris in aliquam sem fringilla ut.
 		\subsection{Título subseção}
@@ -543,6 +561,7 @@
 				
 		\newpage
 	\section{Estudo marca d'agua}
+		
 		Ac turpis egestas sed tempus urna et pharetra pharetra. Sit amet nisl purus in. At quis risus sed vulputate odio ut. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Quis vel eros donec ac odio tempor orci dapibus. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Ornare suspendisse sed nisi lacus sed viverra tellus. Aliquet nibh praesent tristique magna sit amet purus gravida. Risus at ultrices mi tempus. Eu sem integer vitae justo eget magna. Diam ut venenatis tellus in metus vulputate eu scelerisque felis. Nunc sed augue lacus viverra vitae. Quis eleifend quam adipiscing vitae proin. Scelerisque in dictum non consectetur a erat nam. Senectus et netus et malesuada fames ac turpis egestas. Id faucibus nisl tincidunt eget nullam. Scelerisque viverra mauris in aliquam sem fringilla ut.
 		
 		\subsection{Título subseção}
