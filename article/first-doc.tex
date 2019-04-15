@@ -1,4 +1,7 @@
 \documentclass[12pt]{article}
+%% \documentclass[twocolumn]{} : separa o documento em duas colunas
+%% 
+%%
 
 %%&&&&&&&&&&&&&
 %%	PACOTES  &&
@@ -18,6 +21,7 @@
 \usepackage{tabularx} %Este pacote permite personalizaçao margens da tabela
 \usepackage{amsmath} %Este pacote inclui modo matemático
 \usepackage{natbib} %Este pacote adciona opções de citações
+\usepackage{multicol} %Este pacote adciona colunas personalizadas
 
 %% Redefinição de comandos matemáticos
 %%
@@ -32,11 +36,16 @@
 %%&&&&&&&&&&&&&&&&
 
 %%
-%% PARÁGRAFO
+%%  PARÁGRAFO
 %%
 \setlength{\parindent}{1.5cm} %Comando altera identação dos parágrafos
 \setlength{\parskip}{1cm} %Comando altera espaçamentos entre parágrafos
 
+%%
+%%	COLUNAS
+%%
+\setlength{\columnsep}{5mm} %distância entre colunas
+\setlength{\columnseprule}{0.5mm} %adciona separador entre colunas
 
 %%&&&&&&&&&&&&&%%
 %%	DOCUMENTO  &&
@@ -433,6 +442,7 @@
 				
 				
 	\newpage
+	
 	%%
 	%%	ESTUDO DE BIBLIOGRAFIA
 	%%
@@ -446,6 +456,22 @@
 			
 			Metus dictum at tempor commodo. Sit amet est placerat in egestas erat imperdiet sed euismod. Ultrices tincidunt arcu non sodales neque sodales ut. Consequat interdum varius sit amet mattis vulputate enim. Metus aliquam eleifend mi in nulla posuere. Citação de figuras, figura \ref{fig:birb02}Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Lectus urna duis convallis convallis tellus. Morbi tristique senectus et netus et malesuada fames. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. At ultrices mi tempus imperdiet. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Egestas pretium aenean pharetra magna ac placerat.
 	\newpage
+	
+		%%
+	%%	ESTUDO DE COLUNAS
+	%%
+	\section{Estudo de colunas}
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna nec tincidunt praesent semper feugiat nibh sed. Nulla porttitor massa id neque aliquam. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. In metus vulputate eu scelerisque felis imperdiet proin. Amet purus gravida quis blandit turpis cursus. Tortor consequat id porta nibh venenatis. Vitae tempus quam pellentesque nec nam aliquam sem et tortor. Enim nulla aliquet porttitor lacus luctus. Nibh venenatis cras sed felis eget velit. In fermentum et sollicitudin ac orci phasellus egestas. Eget mi proin sed libero enim sed faucibus turpis in. Urna molestie at elementum eu facilisis. Tortor at risus viverra adipiscing at in tellus integer feugiat. Condimentum vitae sapien pellentesque habitant morbi. Condimentum lacinia quis vel eros donec. Viverra vitae congue eu consequat ac felis. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Tellus id interdum velit laoreet.
+		
+		Dictumst quisque sagittis purus sit. Quis eleifend quam adipiscing vitae. Nulla facilisi morbi tempus iaculis urna id volutpat. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. Risus nec feugiat in fermentum. Augue interdum velit euismod in pellentesque massa placerat. Tortor consequat id porta nibh venenatis cras sed felis eget. Purus in mollis nunc sed id. Semper quis lectus nulla at. Felis eget nunc lobortis mattis aliquam faucibus purus. Sed elementum tempus egestas sed sed. Vel pharetra vel turpis nunc eget lorem dolor. Vestibulum mattis ullamcorper velit sed. Sociis natoque penatibus et magnis dis parturient montes.
+		
+		Arcu dui vivamus arcu felis bibendum ut. Fames ac turpis egestas maecenas pharetra. Dolor sed viverra ipsum nunc aliquet. Arcu non odio euismod lacinia. Ut sem viverra aliquet eget. Consectetur libero id faucibus nisl tincidunt eget nullam non. Velit sed ullamcorper morbi tincidunt. Neque laoreet suspendisse interdum consectetur libero. Feugiat vivamus at augue eget arcu dictum varius. Nunc scelerisque viverra mauris in aliquam sem fringilla.
+		
+		Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Enim lobortis scelerisque fermentum dui faucibus in ornare. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Ut lectus arcu bibendum at varius vel pharetra. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Et malesuada fames ac turpis egestas maecenas pharetra. Sed cras ornare arcu dui vivamus. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Id venenatis a condimentum vitae sapien pellentesque habitant morbi. Risus sed vulputate odio ut enim. Sed euismod nisi porta lorem mollis. Elementum tempus egestas sed sed risus. Feugiat scelerisque varius morbi enim.
+		
+		Amet consectetur adipiscing elit duis tristique sollicitudin nibh. Dignissim diam quis enim lobortis scelerisque. Lorem ipsum dolor sit amet consectetur adipiscing. At imperdiet dui accumsan sit amet nulla. Turpis egestas sed tempus urna et pharetra pharetra massa. Et netus et malesuada fames ac turpis egestas sed tempus. Porta nibh venenatis cras sed felis. Nibh sit amet commodo nulla facilisi. Varius morbi enim nunc faucibus a pellentesque sit. Leo a diam sollicitudin tempor id eu nisl nunc mi. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh sed. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a.
+		
+		Odio euismod lacinia at quis risus sed vulputate odio. Id interdum velit laoreet id donec ultrices tincidunt arcu. Leo duis ut diam quam nulla. Augue mauris augue neque gravida in fermentum et. Ac odio tempor orci dapibus ultrices in iaculis nunc sed. Sit amet justo donec enim diam vulputate ut pharetra. Suspendisse faucibus interdum posuere lorem ipsum. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Senectus et netus et malesuada fames ac turpis egestas integer. Auctor urna nunc id cursus metus aliquam eleifend mi. Diam maecenas sed enim ut sem viverra aliquet. Congue mauris rhoncus aenean vel elit. Risus nec feugiat in fermentum posuere urna. Nunc sed velit dignissim sodales ut eu sem.
 	
 	%Adciona bibliografia ao sumário
 	\addcontentsline{toc}{section}{Referências} % toc (TableOfContents), section (hierarquia), Referências (nome no sumário)

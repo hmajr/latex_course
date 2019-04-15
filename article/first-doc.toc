@@ -16,4 +16,5 @@
 \contentsline {subsection}{\numberline {7.4}Boas pr\IeC {\'a}ticas e erros comuns}{15}% 
 \contentsline {section}{\numberline {8}EStudo de bibliografia}{16}% 
 \contentsline {subsection}{\numberline {8.1}Refer\IeC {\^e}ncias de figuras, tabelas, se\IeC {\c c}\IeC {\~o}es e afins}{16}% 
-\contentsline {section}{Refer\IeC {\^e}ncias}{17}% 
+\contentsline {section}{\numberline {9}Estudo de colunas}{17}% 
+\contentsline {section}{Refer\IeC {\^e}ncias}{18}% 
