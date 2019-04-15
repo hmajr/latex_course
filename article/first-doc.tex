@@ -1,48 +1,77 @@
 \documentclass[12pt]{article}
+%% \documentclass[twocolumn]{} : separa o documento em duas colunas
+%% 
+%%
 
 %%&&&&&&&&&&&&&
 %%	PACOTES  &&
 %%&&&&&&&&&&&&&
 
+%% Formatação do texto
 \usepackage[utf8]{inputenc} %Este pacote adciona suporte acentuação
 \usepackage[brazil]{babel} %Este pacote traduz comandos para pt-br
 \usepackage{indentfirst} %Este pacote identa primeiro parágrafo
 \usepackage{setspace} %Este pacote altera espaçamento entre linhas
+%% Margens
 \usepackage[a4paper, left=1cm, right=2cm, top=2cm, bottom=3cm]{geometry} %Este pacote altera margem do documento
+%% Cores
 \usepackage[usenames, dvipsnames]{xcolor} %Modifica as cores [pacotes adcionais de cores]
+%% Figuras
 \usepackage{graphicx} %Este pacote adciona suporte a figuras
 \usepackage{float} %Este pacote força posicionamento de figuras
 \usepackage{subcaption} %Este pacote adciona suporte subfiguras
 \usepackage{wrapfig} %Este pacote permite colocar figura no meio do texto
+%% Tabelas
 \usepackage{multirow} %Este pacote adciona suporte mesclagem linhas
 \usepackage{tabularx} %Este pacote permite personalizaçao margens da tabela
+%% Matemática
 \usepackage{amsmath} %Este pacote inclui modo matemático
-\usepackage{natbib} %Este pacote adciona opções de citações
-
-%% Redefinição de comandos matemáticos
-%%
-\renewcommand{\sin}{\mathrm{ sen\hspace{0.5mm} }}
-\renewcommand{\tan}{\mathrm{ tg\hspace{0.5mm} }}
-
-%Cores personalizadas
-\definecolor{minhacorrgb}{RGB}{85,158,131} %define cor personalizada
+%% Bibliografia
+\usepackage{natbib} %Este pacote adciona opções de citações bibliograficas
+%% Colunas de texto
+\usepackage{multicol} %Este pacote adciona colunas personalizadas
+%% Notas de rodapé
+\usepackage[perpage]{footmisc} %Este pacote reseta contagem de rodapé por página
+%% Citações
+\usepackage{csquotes} %Este pacote adciona opções de quotes
+%%Marca dagua
+\usepackage{draftwatermark} %Este pacote adciona suporte marca dagua
+\usepackage{transparent} %Este pacote adciona suporte transparencia
 
 %%&&&&&&&&&&&&&&&&
 %%	PARÂMETROS  &&
 %%&&&&&&&&&&&&&&&&
 
 %%
-%% PARÁGRAFO
+%%  PARÁGRAFO
 %%
 \setlength{\parindent}{1.5cm} %Comando altera identação dos parágrafos
 \setlength{\parskip}{1cm} %Comando altera espaçamentos entre parágrafos
 
+%%
+%%	COLUNAS
+%%
+\setlength{\columnsep}{5mm} %distância entre colunas
+\setlength{\columnseprule}{0.5mm} %adciona separador entre colunas
+
+%% Redefinição de comandos matemáticos
+%%
+\renewcommand{\sin}{\mathrm{ sen\hspace{0.5mm} }}
+\renewcommand{\tan}{\mathrm{ tg\hspace{0.5mm} }}
+
+%% Redefinição de contador de rodapé
+%%
+\renewcommand{\thefootnote}{\roman{footnote}} %muda estilo de contagem para algarismo romano
+
+%Cores personalizadas
+\definecolor{minhacorrgb}{RGB}{85,158,131} %define cor personalizada
 
 %%&&&&&&&&&&&&&%%
 %%	DOCUMENTO  &&
 %%&&&&&&&&&&&&&%%
 
 \begin{document}
+	\SetWatermarkText{}
 	%%
 	%%	ESTUDO CAPA
 	\title{ \textbf{ESTUDO DE LATEX} } %cria título
@@ -76,6 +105,13 @@
 	%%
 	\setcounter{page}{1}  %reseta contagem de páginas (boa prática deixar explícito)
 	\pagenumbering{arabic} %altera numeração página para algorismo arábico
+	
+	%%
+	%% Marca D'água
+	%%
+	
+	\SetWatermarkText{\transparent{0.3}\includegraphics[width=0.5\linewidth]{figuras/birb_01}}
+	
 	\section{Título grand\~ao}
 		Ac turpis egestas sed tempus urna et pharetra pharetra. Sit amet nisl purus in. At quis risus sed vulputate odio ut. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Quis vel eros donec ac odio tempor orci dapibus. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Ornare suspendisse sed nisi lacus sed viverra tellus. Aliquet nibh praesent tristique magna sit amet purus gravida. Risus at ultrices mi tempus. Eu sem integer vitae justo eget magna. Diam ut venenatis tellus in metus vulputate eu scelerisque felis. Nunc sed augue lacus viverra vitae. Quis eleifend quam adipiscing vitae proin. Ante in nibh mauris cursus mattis. Scelerisque in dictum non consectetur a erat nam. Senectus et netus et malesuada fames ac turpis egestas. Id faucibus nisl tincidunt eget nullam. Scelerisque viverra mauris in aliquam sem fringilla ut.
 		\subsection{Título subseção}
@@ -433,6 +469,7 @@
 				
 				
 	\newpage
+	
 	%%
 	%%	ESTUDO DE BIBLIOGRAFIA
 	%%
@@ -447,7 +484,101 @@
 			Metus dictum at tempor commodo. Sit amet est placerat in egestas erat imperdiet sed euismod. Ultrices tincidunt arcu non sodales neque sodales ut. Consequat interdum varius sit amet mattis vulputate enim. Metus aliquam eleifend mi in nulla posuere. Citação de figuras, figura \ref{fig:birb02}Consequat interdum varius sit amet mattis vulputate enim nulla aliquet. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Lectus urna duis convallis convallis tellus. Morbi tristique senectus et netus et malesuada fames. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. At ultrices mi tempus imperdiet. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Egestas pretium aenean pharetra magna ac placerat.
 	\newpage
 	
+	%%
+	%%	ESTUDO DE COLUNAS
+	%%
+	\section{Estudo de colunas}
+	\begin{multicols}{3} %números de colunas
+		A biblioteca multicol permite a inclusão de um número personalizado e colunas. Permite também especificar partes específicas que irão ter colunas de textos. A inclusão de figuras, tabelas, fórmulas e equações se dá de maneira idêntica a um texto normal (tomando-se cuidado com o ambiente "wrapfigure"). Na definição do tamanho das figuras, usar o comando linewidth, pois o mesmo permite o ajuste automático das figuras a largura da coluna.
+		
+		Dictumst quisque sagittis purus sit. Quis eleifend quam adipiscing vitae. Nulla facilisi morbi tempus iaculis urna id volutpat. Arcu cursus euismod quis viverra nibh cras pulvinar mattis. Risus nec feugiat in fermentum. Augue interdum velit euismod in pellentesque massa placerat. Tortor consequat id porta nibh venenatis cras sed felis eget. Purus in mollis nunc sed id. Semper quis lectus nulla at. Felis eget nunc lobortis mattis aliquam faucibus purus. Sed elementum tempus egestas sed sed. Vel pharetra vel turpis nunc eget lorem dolor. Vestibulum mattis ullamcorper velit sed. Sociis natoque penatibus et magnis dis parturient montes.
+		
+		\begin{figure}[H]	
+			\includegraphics[width=1\linewidth]{figuras/birb_03}
+			\vspace{-20pt} %Diminui espaço entre legenda e imagem
+			\caption[Legenda curta do birb puto 2]{Legenda longa do birb puto 2}
+			\vspace{-10pt} %Diminiui espaço vertical entre legenda e texto
+			\label{fig:birb05}
+			\vspace{-20pt} %Diminui espaço entre legenda e imagem
+		\end{figure}
+	
+		Arcu dui vivamus arcu felis bibendum ut. Fames ac turpis egestas maecenas pharetra. Dolor sed viverra ipsum nunc aliquet. Arcu non odio euismod lacinia. Ut sem viverra aliquet eget. Consectetur libero id faucibus nisl tincidunt eget nullam non. Velit sed ullamcorper morbi tincidunt. Neque laoreet suspendisse interdum consectetur libero. Feugiat vivamus at augue eget arcu dictum varius. Nunc scelerisque viverra mauris in aliquam sem fringilla.
+
+		\begin{equation} %ambiente de equações numerada
+		x = \frac{-b \pm \sqrt{b^2 -4ac}}{2a}
+		\end{equation}
+
+		Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Enim lobortis scelerisque fermentum dui faucibus in ornare. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Ut lectus arcu bibendum at varius vel pharetra. Lectus mauris ultrices eros in cursus turpis massa tincidunt. Et malesuada fames ac turpis egestas maecenas pharetra. Sed cras ornare arcu dui vivamus. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Id venenatis a condimentum vitae sapien pellentesque habitant morbi. Risus sed vulputate odio ut enim. Sed euismod nisi porta lorem mollis. Elementum tempus egestas sed sed risus. Feugiat scelerisque varius morbi enim.
+		\begin{table}[H] %H define 
+			\centering
+			\caption[Legenda curta da tabela 2]{Legenda longa da tabela 2}
+			\label{tab:tab4}
+			\begin{tabular}{|l|l|l|}
+				\hline
+				A1 & \multicolumn{2}{l|}{B1} \\ \hline %comando multicolumn para especificar quantas células mesclar {coluna}{Align |(borda)}{conteúdo}
+				A2 & B2         & C2         \\ \hline
+				A3 & B3         & C3         \\ \hline
+			\end{tabular}
+		\end{table}
+		Amet consectetur adipiscing elit duis tristique sollicitudin nibh. Dignissim diam quis enim lobortis scelerisque. Lorem ipsum dolor sit amet consectetur adipiscing. At imperdiet dui accumsan sit amet nulla. Turpis egestas sed tempus urna et pharetra pharetra massa. Et netus et malesuada fames ac turpis egestas sed tempus. Porta nibh venenatis cras sed felis. Nibh sit amet commodo nulla facilisi. Varius morbi enim nunc faucibus a pellentesque sit. Leo a diam sollicitudin tempor id eu nisl nunc mi. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh sed. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a.
+		
+	\end{multicols}
+	\newpage
+	
+	%%
+	%%	ESTUDO NOTA RODAPÉ E CITAÇÕES
+	%%
+	\section{Estudo nota rodapé}
+		Ac turpis egestas sed tempus urna et pharetra pharetra. Sit amet nisl purus in. At quis risus sed vulputate odio ut. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Quis vel eros donec ac odio tempor orci dapibus. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Ornare suspendisse sed nisi lacus sed viverra tellus. Aliquet nibh praesent tristique magna sit amet purus gravida. Risus at ultrices mi tempus. Eu sem integer vitae justo eget magna. Diam ut venenatis tellus in metus vulputate eu scelerisque felis. Nunc sed augue lacus viverra vitae. Quis eleifend quam adipiscing vitae proin. Ante in nibh mauris cursus mattis.\footnote{Esta é uma nota de rodapé} Scelerisque in dictum non consectetur a erat nam. Senectus et netus et malesuada fames ac turpis egestas. Id faucibus nisl tincidunt eget nullam. Scelerisque viverra mauris in aliquam sem fringilla ut.
+	
+		\subsection{Título subseção}
+			Volutpat commodo sed egestas egestas fringilla phasellus. Sit amet nisl suscipit adipiscing bibendum est ultricies integer. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Facilisis gravida neque convallis a cras semper. Venenatis a condimentum vitae sapien pellentesque habitant. Proin nibh nisl condimentum id venenatis a condimentum. Aliquam sem et tortor consequat id porta nibh. Semper feugiat nibh sed pulvinar. Mi eget mauris pharetra et. Placerat vestibulum lectus mauris ultrices eros in. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Convallis aenean et tortor at risus. Aliquet bibendum enim facilisis gravida neque convallis a. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Sapien et ligula ullamcorper malesuada proin.\footnote[516]{Esta é outra nota de rodapé com contagem zuada}
+		
+			\subsubsection{Título de subsubseção}
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\footnote{Esta é outra nota de rodapé hahahahaha}
+			
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\footnote{Esta é outra nota de rodapé 1} Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\footnote{Esta é outra nota de rodapé 2}
+			
+		\newpage
+		
+	\section{Estudo citações}
+		Ac turpis egestas sed tempus urna et pharetra pharetra. Sit amet nisl purus in. At quis risus sed vulputate odio ut. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Quis vel eros donec ac odio tempor orci dapibus. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Ornare suspendisse sed nisi lacus sed viverra tellus. Aliquet nibh praesent tristique magna sit amet purus gravida. Risus at ultrices mi tempus. Eu sem integer vitae justo eget magna. Diam ut venenatis tellus in metus vulputate eu scelerisque felis. Nunc sed augue lacus viverra vitae. Quis eleifend quam adipiscing vitae proin. \enquote{UMA CITAÇÃO FEITA NO TEXTO.}. Scelerisque in dictum non consectetur a erat nam. Senectus et netus et malesuada fames ac turpis egestas. Id faucibus nisl tincidunt eget nullam. Scelerisque viverra mauris in aliquam sem fringilla ut. \footnote{Esta é outra nota de rodapé}
+		
+		\subsection{Título subseção}
+			Volutpat commodo sed egestas egestas fringilla phasellus. Sit amet nisl suscipit adipiscing bibendum est ultricies integer. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Facilisis gravida neque convallis a cras semper. Venenatis a condimentum vitae sapien pellentesque habitant. Proin nibh nisl condimentum id venenatis a condimentum. Aliquam sem et tortor consequat id porta nibh. Semper feugiat nibh sed pulvinar. Mi eget mauris pharetra et. \footnote{Esta é outra nota de rodapé com contagem NORMAL}
+			
+			\begin{quote}
+				ESTA É UMA CITAÇÃO CURTA
+			\end{quote}
+			
+			\begin{quotation}
+				\textbf{ESTA JÁ É UMA CITAÇÃO LONGA.} Placerat vestibulum lectus mauris ultrices eros in. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Convallis aenean et tortor at risus. Aliquet bibendum enim facilisis gravida neque convallis a. 
+				
+				Pharetra massa massa ultricies mi quis hendrerit dolor magna. Sapien et ligula ullamcorper malesuada proin.\footnote[516]{Esta é outra nota de rodapé com contagem zuada}
+			\end{quotation}
+		
+			\subsubsection{Título de subsubseção}
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ``Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+				
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\footnote{Esta é outra nota de rodapé 1} Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\footnote{Esta é outra nota de rodapé 2}
+				
+		\newpage
+	\section{Estudo marca d'agua}
+		
+		Ac turpis egestas sed tempus urna et pharetra pharetra. Sit amet nisl purus in. At quis risus sed vulputate odio ut. Placerat duis ultricies lacus sed turpis tincidunt id aliquet. Quis vel eros donec ac odio tempor orci dapibus. Sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Ornare suspendisse sed nisi lacus sed viverra tellus. Aliquet nibh praesent tristique magna sit amet purus gravida. Risus at ultrices mi tempus. Eu sem integer vitae justo eget magna. Diam ut venenatis tellus in metus vulputate eu scelerisque felis. Nunc sed augue lacus viverra vitae. Quis eleifend quam adipiscing vitae proin. Scelerisque in dictum non consectetur a erat nam. Senectus et netus et malesuada fames ac turpis egestas. Id faucibus nisl tincidunt eget nullam. Scelerisque viverra mauris in aliquam sem fringilla ut.
+		
+		\subsection{Título subseção}
+		Volutpat commodo sed egestas egestas fringilla phasellus. Sit amet nisl suscipit adipiscing bibendum est ultricies integer. Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Facilisis gravida neque convallis a cras semper. Venenatis a condimentum vitae sapien pellentesque habitant. Proin nibh nisl condimentum id venenatis a condimentum. Aliquam sem et tortor consequat id porta nibh. Semper feugiat nibh sed pulvinar. Mi eget mauris pharetra et. \footnote{Esta é outra nota de rodapé com contagem NORMAL}
+
+		
+		\subsubsection{Título de subsubseção}
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ``Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		
+		\newpage
 	%Adciona bibliografia ao sumário
+	\SetWatermarkText{}
 	\addcontentsline{toc}{section}{Referências} % toc (TableOfContents), section (hierarquia), Referências (nome no sumário)
 	\bibliographystyle{apalike} %estilo da bibliografia e citações
 	\bibliography{first_bib} %qual bibliografia adcionar as referências

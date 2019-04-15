@@ -1,0 +1,33 @@
+\documentclass[12pt,a4paper]{article}
+
+%%%%%%%%%%%%%
+%  PACOTES	%
+%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=1.00cm, right=2.00cm, top=2.00cm, bottom=3.00cm]{geometry}
+
+\author{Helio M Andrade}
+\title{Estudo de múltiplos arquivos}
+\begin{document}
+	\maketitle
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	\section{Introdução}
+	\input{intro} %adciona texto do arquivo intro.tex
+	\newpage
+	
+	\section{Desenvolvimento}
+	\input{desenvolvimento}
+	\newpage
+	
+	\section{Conclusão}
+	\input{conclusao}
+\end{document}
