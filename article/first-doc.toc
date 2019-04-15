@@ -17,4 +17,7 @@
 \contentsline {section}{\numberline {8}EStudo de bibliografia}{16}% 
 \contentsline {subsection}{\numberline {8.1}Refer\IeC {\^e}ncias de figuras, tabelas, se\IeC {\c c}\IeC {\~o}es e afins}{16}% 
 \contentsline {section}{\numberline {9}Estudo de colunas}{17}% 
-\contentsline {section}{Refer\IeC {\^e}ncias}{18}% 
+\contentsline {section}{\numberline {10}Estudo nota rodap\IeC {\'e}}{18}% 
+\contentsline {subsection}{\numberline {10.1}T\IeC {\'\i }tulo subse\IeC {\c c}\IeC {\~a}o}{18}% 
+\contentsline {subsubsection}{\numberline {10.1.1}T\IeC {\'\i }tulo de subsubse\IeC {\c c}\IeC {\~a}o}{18}% 
+\contentsline {section}{Refer\IeC {\^e}ncias}{20}% 
